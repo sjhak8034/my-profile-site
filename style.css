@@ -1,0 +1,88 @@
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 6rem; }
+
+:root {
+  --paper: #f6f5f2;
+  --line: rgba(34, 34, 34, 0.06);
+}
+.dark { --line: rgba(255, 255, 255, 0.05); }
+
+/* 은은한 선 패턴 배경 */
+.hero-bg {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: center top;
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+  mask-image: linear-gradient(to bottom, #000 70%, transparent);
+}
+
+/* 부드러운 그림자 */
+.soft-shadow { box-shadow: 0 6px 24px -6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.06); }
+.accent-shadow { box-shadow: 0 8px 20px -6px rgba(240, 80, 31, 0.55); }
+
+/* 카드 */
+.card {
+  background: #fff;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 30px -10px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.dark .card { background: #1f1f1f; border-color: rgba(255, 255, 255, 0.08); }
+.project { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.project:hover { transform: translateY(-6px); box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.2); }
+
+/* 버튼 */
+.btn-dark, .btn-light {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-dark {
+  background: #222;
+  color: #fff;
+  border: 1px solid #000;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.dark .btn-dark { background: #fff; color: #222; border-color: #fff; }
+.btn-light {
+  background: #fff;
+  color: #222;
+  box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.2);
+}
+.dark .btn-light { background: #1f1f1f; color: #fff; }
+.btn-dark:hover, .btn-light:hover { transform: translateY(-2px); }
+
+/* 칩 / 태그 */
+.chip {
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.18);
+}
+.dark .chip { background: #1f1f1f; color: #fff; }
+.tag {
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.5rem;
+  background: rgba(240, 80, 31, 0.1);
+  color: #f0501f;
+  font-weight: 500;
+}
+
+.section-title { font-size: 1.875rem; font-weight: 800; letter-spacing: -0.02em; color: #222; }
+.dark .section-title { color: #fff; }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible { opacity: 1; transform: none; }
+
+.nav-link.active { color: #f0501f; }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>송정학 | 프로필</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: {
+        fontFamily: { sans: ['Pretendard', 'system-ui', 'sans-serif'] },
+        colors: { paper: '#f6f5f2', ink: '#222222', accent: '#f0501f', night: '#141414', nightcard: '#1f1f1f' }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-sans bg-paper text-ink/70 dark:bg-night dark:text-white/70 antialiased">
+
+  <!-- 떠 있는 헤더 -->
+  <header class="fixed top-4 inset-x-0 z-50 px-4">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between px-3 h-16 rounded-2xl bg-white dark:bg-nightcard soft-shadow">
+      <a href="#home" class="px-4 py-2 rounded-xl bg-accent text-white font-extrabold text-lg tracking-tight accent-shadow">송정학</a>
+      <ul class="hidden md:flex items-center gap-9 text-base font-medium">
+        <li><a href="#about" class="nav-link hover:text-ink dark:hover:text-white">소개</a></li>
+        <li><a href="#skills" class="nav-link hover:text-ink dark:hover:text-white">기술</a></li>
+        <li><a href="#projects" class="nav-link hover:text-ink dark:hover:text-white">프로젝트</a></li>
+        <li><a href="#contact" class="nav-link hover:text-ink dark:hover:text-white">연락처</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" aria-label="테마 전환" class="w-10 h-10 rounded-xl hover:bg-ink/5 dark:hover:bg-white/10">
+          <span class="dark:hidden">🌙</span><span class="hidden dark:inline">☀️</span>
+        </button>
+        <a href="https://github.com/sjhak8034" target="_blank" rel="noopener" class="btn-dark hidden sm:inline-block">GitHub</a>
+        <button id="menu-toggle" aria-label="메뉴 열기" class="md:hidden w-10 h-10 rounded-xl hover:bg-ink/5 dark:hover:bg-white/10">☰</button>
+      </div>
+    </nav>
+    <ul id="mobile-menu" class="hidden md:hidden max-w-5xl mx-auto mt-2 p-5 space-y-3 text-base font-medium rounded-2xl bg-white dark:bg-nightcard soft-shadow">
+      <li><a href="#about" class="nav-link block">소개</a></li>
+      <li><a href="#skills" class="nav-link block">기술</a></li>
+      <li><a href="#projects" class="nav-link block">프로젝트</a></li>
+      <li><a href="#contact" class="nav-link block">연락처</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero-bg pt-40 pb-28">
+      <div class="max-w-3xl mx-auto px-6 text-center flex flex-col items-center fade-in">
+        <div class="w-40 h-40 rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950 dark:to-nightcard border border-white dark:border-white/10 soft-shadow flex items-center justify-center text-6xl font-extrabold text-accent">송</div>
+
+        <div class="mt-10 inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-white dark:bg-nightcard soft-shadow text-sm">
+          <span class="px-2 py-0.5 rounded-md bg-accent/10 text-accent font-medium">Hey!</span>
+          <span>저는 <b class="text-ink dark:text-white">송정학</b>입니다</span>
+        </div>
+
+        <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight text-ink dark:text-white">
+          AI와 함께, <span class="text-accent">제대로 동작하는</span><br />백엔드를 만듭니다!
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed">백엔드 개발자 · AI 시대에 걸맞은 인재가 되기 위해 노력해 왔습니다.<br class="hidden sm:block" />복잡한 문제를 깔끔하게 동작하는 코드로 풀어냅니다.</p>
+        <div class="mt-9 flex gap-4">
+          <a href="#contact" class="btn-dark">연락하기 &nbsp;›</a>
+          <a href="#projects" class="btn-light">프로젝트 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20">
+      <div class="max-w-5xl mx-auto px-6 fade-in">
+        <div class="card p-8 sm:p-12 grid md:grid-cols-[auto,1fr] gap-10 items-center">
+          <div class="mx-auto w-36 h-36 rounded-3xl bg-accent text-white flex items-center justify-center text-3xl font-extrabold accent-shadow">송정학</div>
+          <div>
+            <h2 class="section-title">소개</h2>
+            <p class="leading-relaxed mt-4">AI 시대에 걸맞은 인재가 되기 위해 노력해 왔습니다.</p>
+            <p class="leading-relaxed mt-3">프로젝트는 AI와의 협업으로 제작하였습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20">
+      <div class="max-w-5xl mx-auto px-6 fade-in">
+        <h2 class="section-title">기술 스택</h2>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="chip">Java</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">Python</span>
+          <span class="chip">C</span>
+          <span class="chip">C++</span>
+          <span class="chip">AWS CI/CD</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="section-title fade-in">프로젝트</h2>
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="card project fade-in p-3">
+            <div class="h-40 rounded-xl bg-gradient-to-br from-orange-100 to-orange-200 dark:from-orange-950 dark:to-orange-900"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg text-ink dark:text-white">프로젝트 1</h3>
+              <p class="mt-2 text-sm leading-relaxed">프로젝트에 대한 간단한 설명을 적어주세요.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="tag">Java</span><span class="tag">Spring Boot</span>
+              </div>
+              <a href="#" class="inline-block mt-4 text-sm font-semibold text-accent hover:underline">자세히 보기 →</a>
+            </div>
+          </article>
+          <article class="card project fade-in p-3">
+            <div class="h-40 rounded-xl bg-gradient-to-br from-stone-200 to-stone-300 dark:from-stone-800 dark:to-stone-700"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg text-ink dark:text-white">프로젝트 2</h3>
+              <p class="mt-2 text-sm leading-relaxed">프로젝트에 대한 간단한 설명을 적어주세요.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="tag">Python</span><span class="tag">AWS CI/CD</span>
+              </div>
+              <a href="#" class="inline-block mt-4 text-sm font-semibold text-accent hover:underline">자세히 보기 →</a>
+            </div>
+          </article>
+          <article class="card project fade-in p-3">
+            <div class="h-40 rounded-xl bg-gradient-to-br from-amber-100 to-orange-300 dark:from-amber-950 dark:to-orange-800"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg text-ink dark:text-white">프로젝트 3</h3>
+              <p class="mt-2 text-sm leading-relaxed">프로젝트에 대한 간단한 설명을 적어주세요.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                <span class="tag">C++</span><span class="tag">C</span>
+              </div>
+              <a href="#" class="inline-block mt-4 text-sm font-semibold text-accent hover:underline">자세히 보기 →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20">
+      <div class="max-w-5xl mx-auto px-6 fade-in">
+        <div class="card p-10 sm:p-14 text-center">
+          <h2 class="section-title">연락처</h2>
+          <p class="mt-4 mb-8">함께 일하고 싶거나 궁금한 점이 있다면 편하게 연락주세요.</p>
+          <a href="https://github.com/sjhak8034" target="_blank" rel="noopener" class="btn-dark">GitHub · sjhak8034 &nbsp;›</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 text-center text-sm text-ink/50 dark:text-white/40">
+    © <span id="year"></span> 송정학. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
